@@ -24,13 +24,21 @@ public class VectorUnionTest {
                 add(1);
             }
         };
+        
+        Vector<Object> vectorExpected = new Vector<Object>() {
+            private static final long serialVersionUID = 1L;
+
+            {
+                add(1);
+            }
+        };
 
         Vector<Object> unionVector = VectorUnion.unionSet(vectorA, vectorB);
-        assertEquals(1, unionVector.size());
+        assertEquals(vectorExpected, unionVector);
     }
 
 	@Test
-    public void testOrderDataVector(){
+    public void testKeepOrderDataWithSameTypeVector(){
         Vector<Object> vectorA = new Vector<Object>() {
             private static final long serialVersionUID = 1L;
 
@@ -60,7 +68,7 @@ public class VectorUnionTest {
     }
 	
 	@Test
-    public void testKeepDifferentTypeDataVector(){
+    public void testKeepDifferentTypeDataAndKeepOrderVector(){
         Vector<Object> vectorA = new Vector<Object>() {
             private static final long serialVersionUID = 1L;
 
