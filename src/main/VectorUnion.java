@@ -3,10 +3,9 @@ package main;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Vector;
-import java.util.stream.Collectors;
 
 public class VectorUnion {
-	 public static Vector<Object> unionSet(Vector a, Vector b) {
+	 public static Vector<Object> unionSet(Vector<Object> a, Vector<Object> b) {
 	    Vector<Object> union = new Vector<Object>();
 	    
 	    Set<Object> unique = new HashSet<Object>();

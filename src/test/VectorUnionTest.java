@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Vector;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeAll;
 
 import main.VectorUnion;
 
@@ -70,9 +69,9 @@ public class VectorUnionTest {
             }
         };
         Vector<Object> vectorB = new Vector<Object>() {
-            private static final long serialVersionUID = 1L;
+			private static final long serialVersionUID = 1L;
 
-            {
+			{
                 add(10);
             }
         };
